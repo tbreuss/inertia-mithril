@@ -1,14 +1,10 @@
 import {Inertia} from '@inertiajs/inertia'
 import m from 'mithril'
 
-const empty = {
-  view: () => {
-    return m('div')
+const page = {
+  component: {
+    view: () => m('div')
   },
-}
-
-const state = {
-  component: empty,
   props: {},
   key: null,
 }
@@ -27,13 +23,13 @@ const app = {
     initialPage: app.initialPage,
     resolveComponent: app.resolveComponent,
     updatePage: (component, props, {preserveState}) => {
-      state.component = component
-      state.props = app.transformProps(props)
-      state.key = preserveState ? state.key : Date.now()
+      page.component = component
+      page.props = app.transformProps(props)
+      page.key = preserveState ? page.key : Date.now()
       m.redraw()
     },
   }),
-  view: () => m(state.component, state.props),
+  view: () => m(page.component, page.props),
 }
 
 export default app
