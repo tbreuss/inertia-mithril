@@ -5,7 +5,7 @@ export default {
   view: v => {
 
     let cls = v.attrs.class || ''
-    let href = (v.attrs.route || (v.attrs.url || ''))
+    let href = v.attrs.href || ''
     let data = v.attrs.data || {}
     let method = v.attrs.method || 'get'
     let replace = v.attrs.replace || false
