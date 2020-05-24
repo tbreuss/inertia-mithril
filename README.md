@@ -1,6 +1,6 @@
 # Inertia.js Mithril Adapter
 
-This is the Mithril.js client-side adapter for [Inertia](https://inertiajs.com).
+This is the [Mithril.js](https://mithril.js.org) client-side adapter for [Inertia](https://inertiajs.com).
 
 Inertia.js lets you quickly build modern single-page apps using classic server-side routing and controllers, without building an API.
 
